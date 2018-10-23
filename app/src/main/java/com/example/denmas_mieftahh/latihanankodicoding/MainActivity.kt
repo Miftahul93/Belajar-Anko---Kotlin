@@ -34,6 +34,23 @@ class MainActivity : AppCompatActivity() {
                 }.lparams(width = matchParent) {
                     topMargin = dip(5)
                 }
+
+                //Button Alert
+
+                button("Show Alert") {
+                    backgroundColor = ContextCompat.getColor(context, colorAccent)
+                    textColor = Color.WHITE
+
+                    onClick {
+                        alert("Happy Coding!", "Hello, ${name.text}!") {
+                            yesButton { toast("Oh...") }
+                            noButton {  }
+                        }.show()
+                    }
+                }.lparams(width = matchParent){
+                    topMargin = dip(5)
+                }
+
             }
         }
     }
