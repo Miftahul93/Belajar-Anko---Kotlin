@@ -51,6 +51,22 @@ class MainActivity : AppCompatActivity() {
                     topMargin = dip(5)
                 }
 
+                //Button Show Selector
+
+                button("Show Selector") {
+                    backgroundColor = ContextCompat.getColor(context, colorAccent)
+                    textColor = Color.WHITE
+
+                    onClick {
+                        val club = listOf("Barcelona", "Real Madrid", "Bayern Munchen", "Liverpool")
+                        selector("Hello, ${name.text}! What's Football club do you love ??", club) {_, i ->
+                            toast("So you love ${club[i]}, right?")
+                        }
+                    }
+                }.lparams(width = matchParent){
+                    topMargin = dip(5)
+                }
+
             }
         }
     }
