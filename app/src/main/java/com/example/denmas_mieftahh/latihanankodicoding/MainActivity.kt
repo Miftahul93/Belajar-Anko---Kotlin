@@ -81,6 +81,19 @@ class MainActivity : AppCompatActivity() {
                     topMargin = dip(5)
                 }
 
+                //Show Progres Bar
+
+                button("Show Progres Bar") {
+                    backgroundColor = ContextCompat.getColor(context, colorAccent)
+                    textColor = Color.WHITE
+
+                    onClick {
+                        indeterminateProgressDialog("Hello, ${name.text}! Please wait...").show()
+                    }
+                }.lparams(width = matchParent){
+                    topMargin = dip(5)
+                }
+
             }
         }
     }
