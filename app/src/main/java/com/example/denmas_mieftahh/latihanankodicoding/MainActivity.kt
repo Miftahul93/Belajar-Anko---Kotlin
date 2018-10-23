@@ -95,7 +95,6 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //Go To Second Activity
-
                 button("Go to Second Activity") {
                     backgroundColor = ContextCompat.getColor(context, colorAccent)
                     textColor = Color.WHITE
