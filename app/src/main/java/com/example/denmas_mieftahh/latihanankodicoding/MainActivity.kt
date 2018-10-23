@@ -94,6 +94,18 @@ class MainActivity : AppCompatActivity() {
                     topMargin = dip(5)
                 }
 
+                //Go To Second Activity
+
+                button("Go to Second Activity") {
+                    backgroundColor = ContextCompat.getColor(context, colorAccent)
+                    textColor = Color.WHITE
+
+                    onClick {
+                        startActivity<SecondActivity>("name" to "${name.text}")
+                    }
+                }.lparams(width = matchParent){
+                    topMargin = dip(5)
+                }
             }
         }
     }
