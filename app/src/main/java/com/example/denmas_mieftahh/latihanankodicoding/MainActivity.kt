@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import com.example.denmas_mieftahh.latihanankodicoding.R.color.colorAccent
 import org.jetbrains.anko.*
+import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
 class MainActivity : AppCompatActivity() {
@@ -62,6 +63,19 @@ class MainActivity : AppCompatActivity() {
                         selector("Hello, ${name.text}! What's Football club do you love ??", club) {_, i ->
                             toast("So you love ${club[i]}, right?")
                         }
+                    }
+                }.lparams(width = matchParent){
+                    topMargin = dip(5)
+                }
+
+                //Button Snack Bar
+
+                button("Show Snackbar") {
+                    backgroundColor = ContextCompat.getColor(context, colorAccent)
+                    textColor = Color.WHITE
+
+                    onClick {
+                        snackbar(name, "Hello, ${name.text}!")
                     }
                 }.lparams(width = matchParent){
                     topMargin = dip(5)
