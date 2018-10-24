@@ -9,8 +9,9 @@ import org.jetbrains.anko.textView
 import org.jetbrains.anko.verticalLayout
 
 class SecondActivity : AppCompatActivity(){
+
     private var name: String = ""
-    lateinit var nameTextView: TextView
+    private lateinit var nameTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
